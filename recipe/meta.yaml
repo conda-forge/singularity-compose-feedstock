@@ -25,7 +25,7 @@ requirements:
     - python >=3
     - requests
     - pyaml
-    - spython >=0.0.68
+    - spython >=0.0.69
 
 test:
   imports:
