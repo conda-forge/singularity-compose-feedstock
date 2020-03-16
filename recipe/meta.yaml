@@ -1,20 +1,20 @@
 {% set name = "singularity-compose" %}
-{% set version = "0.0.17" %}
+{% set version = "0.0.18" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 9a9a36a73efe415562b220a45ec364fcdde201bb5ce7c6c0a8a760d7c69cec87
+  sha256: b2a8f3346aa1731f5750c3ab0b5c705fbd8b514e9f91a825de137c6eb46f273d
 
 build:
   number: 0
   noarch: python
   entry_points:
     - singularity-compose=scompose.client:start
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
+  script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
 
 requirements:
   host:
