@@ -23,8 +23,7 @@ requirements:
     - pytest-runner
   run:
     - python >=3
-    - requests
-    - pyaml
+    - pyyaml
     - spython >=0.0.69
 
 test:
