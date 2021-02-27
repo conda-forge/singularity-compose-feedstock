@@ -1,5 +1,5 @@
 {% set name = "singularity-compose" %}
-{% set version = "0.0.20" %}
+{% set version = "0.0.21" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: c3b31469ad4df61cfbfc36862f40ecb5356a5a176062be85624aaf8858d30bd2
+  sha256: 3fca368c84fe63f7ccffa71b0bd66e0172f3c747b8726e36f667a91e23964322
 
 build:
   number: 0
@@ -23,8 +23,7 @@ requirements:
     - pytest-runner
   run:
     - python >=3
-    - requests
-    - pyaml
+    - pyyaml
     - spython >=0.0.69
 
 test:
@@ -53,13 +52,13 @@ test:
     - pytest
 
 about:
-  home: http://www.github.com/singularityhub/singularity-compose
-  license: AGPL-3.0
+  home: https://github.com/singularityhub/singularity-compose
+  license: MPL-2.0
   license_family: OTHER
   license_file: LICENSE
   summary: Simple orchestration for Singularity container instances
   doc_url: https://singularityhub.github.io/singularity-compose
-  dev_url: https://www.github.com/singularityhub/singularity-compose
+  dev_url: https://github.com/singularityhub/singularity-compose
 
 extra:
   recipe-maintainers:
