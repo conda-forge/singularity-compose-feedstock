@@ -1,15 +1,15 @@
 About singularity-compose
 =========================
 
-Home: http://www.github.com/singularityhub/singularity-compose
+Home: https://github.com/singularityhub/singularity-compose
 
-Package license: AGPL-3.0
+Package license: MPL-2.0
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/singularity-compose-feedstock/blob/master/LICENSE.txt)
 
 Summary: Simple orchestration for Singularity container instances
 
-Development: https://www.github.com/singularityhub/singularity-compose
+Development: https://github.com/singularityhub/singularity-compose
 
 Documentation: https://singularityhub.github.io/singularity-compose
 
@@ -40,6 +40,7 @@ Installing `singularity-compose` from the `conda-forge` channel can be achieved 
 
 ```
 conda config --add channels conda-forge
+conda config --set channel_priority strict
 ```
 
 Once the `conda-forge` channel has been enabled, `singularity-compose` can be installed with:
