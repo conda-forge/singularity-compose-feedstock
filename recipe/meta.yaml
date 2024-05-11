@@ -1,5 +1,5 @@
 {% set name = "singularity-compose" %}
-{% set version = "0.1.18" %}
+{% set version = "0.1.19" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 177de30bd8c7813bfe668af20e93a0fa9bed0f00541611a1a2cebff49812f54f
+  sha256: 86ced30ce84a66e481c8ec288b880eea396efd7f8b62257e787c49373f552d38
 
 build:
   number: 0
