@@ -6,11 +6,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 86ced30ce84a66e481c8ec288b880eea396efd7f8b62257e787c49373f552d38
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - singularity-compose=scompose.client:start
@@ -19,10 +19,10 @@ build:
 requirements:
   host:
     - pip
-    - python >=3
+    - python {{ python_min }}
     - pytest-runner
   run:
-    - python >=3
+    - python >={{ python_min }}
     - pyyaml
     - spython >=0.0.69
 
@@ -50,6 +50,7 @@ test:
     - singularity-compose --help
   requires:
     - pytest
+    - python {{ python_min }}
 
 about:
   home: https://github.com/singularityhub/singularity-compose
